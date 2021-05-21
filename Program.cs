@@ -7,8 +7,17 @@ Console.WriteLine();
 MooseSays("H I, I'M  E N T H U S I A S T I C !");
 MooseSays("I really am enthusiastic");
 
+// Ask a question
 bool isTrue = MooseAsks("Is Canada real?");
-Console.WriteLine(isTrue);
+if(isTrue)
+{
+  MooseSays("Realy? It seems very unlikely.");
+}
+else
+{
+  MooseSays("I K N E W  I T ! ! ! !");
+}
+
 
 void MooseSays(string message)
 {
