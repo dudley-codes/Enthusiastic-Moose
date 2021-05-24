@@ -1,71 +1,32 @@
 ﻿using System;
 
+Main();
+
+void Main()
+{
 Console.WriteLine("Welcome to the Enthusiastic Moose Simulator!");
 Console.WriteLine("--------------------------------------------");
 Console.WriteLine();
-
-MooseSays("H I, I'M  E N T H U S I A S T I C !");
-MooseSays("I really am enthusiastic");
+}
 
 // Ask a question
-CanadaQuestion();
-EnthusiasticQuestion();
-LoveCSharpQuestion();
-SecretQuestion();
+  MooseQuestions("Are you enthusiastic?", "yay!", "You should try it!");
+  MooseQuestions("Do you love C# yet?", "Good job sucking up to your instructor!", "You will... oh, yes, you will...");
+  MooseQuestions("Do you want to know a secret?", "ME TOO!!!! I love secrets...tell me one!", "Oh, no...secrets are the best, I love to share them!");
+ 
 
-void EnthusiasticQuestion()
+void MooseQuestions(string question, string yesAnswer, string noAnswer)
 {
-    bool isEnthusiastic = MooseAsks("Are you enthusiastic?");
-    if (isEnthusiastic)
+    bool isTrue = MooseAsks(question);
+    if(isTrue)
     {
-        MooseSays("Yay!");
+      MooseSays(yesAnswer);
     }
-    else
+    else 
     {
-        MooseSays("You should try it!");
+      MooseSays(noAnswer);
     }
-}
-
-void LoveCSharpQuestion()
-{
-    bool doesLoveCSharp = MooseAsks("Do you love C# yet?");
-    if (doesLoveCSharp)
-    {
-        MooseSays("Good job sucking up to your instructor!");
-    }
-    else
-    {
-        MooseSays("You will...oh, yes, you will...");
-    }
-}
-
-void SecretQuestion()
-{
-    bool wantsSecret = MooseAsks("Do you want to know a secret?");
-    if (wantsSecret)
-    {
-        MooseSays("ME TOO!!!! I love secrets...tell me one!");
-    }
-    else
-    {
-        MooseSays("Oh, no...secrets are the best, I love to share them!");
-    }
-}
-
-
-void CanadaQuestion()
-{
-bool isTrue = MooseAsks("Is Canada real?");
-if(isTrue)
-{
-  MooseSays("Realy? It seems very unlikely.");
-}
-else
-{
-  MooseSays("I K N E W  I T ! ! ! !");
-}
-}
-
+};
 
 void MooseSays(string message)
 {
